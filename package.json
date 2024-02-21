@@ -1,0 +1,23 @@
+{
+  "name": "express_3etap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "indexCookieMaker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.5.4",
+    "eslint": "^8.44.0",
+    "eslint-config-airbnb": "^19.0.4"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "express-rate-limit": "^6.7.1"
+  }
+}

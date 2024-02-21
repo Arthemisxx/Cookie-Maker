@@ -1,0 +1,24 @@
+<h1>Make your cookie!</h1>
+
+<h2>Select cookie base</h2>
+
+    {{#each allBases}}
+    <a href="/configurator/select-base/{{this.[0]}}" class="select-buttons">{{this.[0]}} - {{this.[1]}} PLN</a>
+    {{/each}}
+
+<h2>Select addons</h2>
+
+{{#each allAddons}}
+        <a href="/configurator/add-addon/{{this.[0]}}" class="select-buttons{{#if (isInArray @root.cookie.addons this.[0])}}-disabled{{/if}}">{{this.[0]}} - {{this.[1]}} PLN</a>
+{{/each}}
+
+{{#if cookie.base}}
+    {{> cookie-preview}}
+    {{> addons}}
+    <a href="/order/summary" class="order-buttons"><img src="/assets/images/cart.png" alt="" class="cart-img">Order now</a>
+{{else}}
+    <h2>Please select base of your cookie to see its preview and price summary</h2>
+{{/if}}
+
+
+
